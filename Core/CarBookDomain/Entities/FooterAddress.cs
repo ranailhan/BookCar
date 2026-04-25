@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarBookDomain.Entities
 {
-    public class FooterAdress
+    public class FooterAddress
     {
         public int FooterAddressId { get; set; }
         public string Description { get; set; }
