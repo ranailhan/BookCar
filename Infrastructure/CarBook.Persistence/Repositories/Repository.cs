@@ -33,11 +33,20 @@ namespace CarBook.Persistence.Repositories
         {
             return await _context.Set<T>().FindAsync(id);
         }
-
-        public async Task RemoveAsync(T entity)
+        public async Task RemoveAsync(int id)
         {
-             _context.Set<T>().Remove(entity);
+            var entity = await _context.Set<T>().FindAsync(id);
+
+            if (entity == null)
+                return;
+
+            _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
+        }
+
+        public Task RemoveAsync(T entity)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task UpdateAsync(T entity)

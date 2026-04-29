@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.CQRS.Commands.AboutCommands
+namespace CarBook.Application.Features.CQRS.Commands.BannerCommands
 {
-    public class CreateAboutCommand
+    public class CreateBannerCommand
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public string ImageURL { get; set; }
+        public string VideoDescription { get; set; }
+        public string VideoUrl { get; set; }
     }
 }
