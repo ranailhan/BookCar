@@ -44,10 +44,6 @@ namespace CarBook.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public Task RemoveAsync(T entity)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task UpdateAsync(T entity)
         {
